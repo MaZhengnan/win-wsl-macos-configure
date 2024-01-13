@@ -1,0 +1,433 @@
+{
+    // well, I don't like indents
+    "editor.guides.indentation": true,
+    // who need minimaps
+    "editor.minimap.enabled": false,
+    // scroll bar
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontal": "auto",
+    // chinese
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true
+    },
+    // tab bar
+    "workbench.editor.showTabs": "multiple",
+    // activity bar
+    "workbench.activityBar.location": "side",
+    // title
+    "window.title": "${activeEditorShort}${separator}",
+    // don't need command center
+    "window.commandCenter": false,
+    // explorer
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // file auto save
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    // file encoding
+    "files.encoding": "utf8",
+    "editor.fontFamily": "'Iosevka', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "files.trimTrailingWhitespace": true,
+    // word wrap
+    "editor.wordWrap": "on",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.4,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.useTabStops": true,
+    "editor.detectIndentation": false,
+    // Error Lens
+    "workbench.colorCustomizations": {
+        "errorLens.errorForeground": "#ff0000", // 对应 BUG 和 FIXME
+        "errorLens.warningForeground": "#fa973a", // 对应 HACK 和 TODO
+        "errorLens.infoForeground": "#00b7e4", // 对应 NOTE
+        "errorLens.hintForeground": "#2faf64", // 对应 HINT
+    },
+    // Git
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    // GitLens
+    "gitlens.defaultDateFormat": "YYYY-MM-DD hh:mm:ss",
+    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+
+    "editor.inlayHints.fontFamily": "'Iosevka Medium', 'Iosevka Curly Medium', 'Cascadia Code', 'Sarasa Gothic CL'",
+    "editor.inlayHints.fontSize": 14,
+    "clangd.arguments": [
+        "--index",
+        "--background-index",
+        "--suggest-missing-includes",
+        "--clang-tidy",
+        "--header-insertion=iwyu",
+        "--completion-style=bundled",
+    ],
+    // CMake
+    "cmake.buildDirectory": "${workspaceFolder}/out/${buildType}",
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.useCMakePresets": "always",
+    "vim.leader": "<space>",
+    "editor.lineNumbers": "relative",
+    "vim.surround": true,
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    // In visual mode, start a search with * or # using the current selection
+    "vim.visualstar": true,
+    "vim.highlightedyank.enable": true,
+    "vim.ignorecase": true,
+    // highlight all text matching current search
+    "vim.hlsearch": true,
+    "vim.shell": "/bin/sh",
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before":[
+                "<leader>"
+            ],
+            "commands":[
+                "whichkey.show"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before":[
+                "j",
+                "j"
+            ],
+            "after":[
+                "<Esc>"
+            ]
+        }
+    ],
+    // which key, for key remapping
+    "whichkey.bindings": [
+        {
+            "key": "c",
+            "name": "+CMake",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Configure",
+                    "type": "command",
+                    "command": "cmake.configure"
+                },
+                {
+                    "key": "b",
+                    "name": "Build",
+                    "type": "command",
+                    "command": "cmake.build"
+                },
+                {
+                    "key": "r",
+                    "name": "Launch",
+                    "type": "command",
+                    "command": "cmake.launchTarget"
+                },
+                {
+                    "key": "d",
+                    "name": "Debug",
+                    "type": "command",
+                    "command": "cmake.debugTarget"
+                },
+                {
+                    "key": "k",
+                    "name": "Kits",
+                    "type": "command",
+                    "command": "cmake.selectKit"
+                },
+                {
+                    "key": "v",
+                    "name": "Select variant",
+                    "type": "command",
+                    "command": "cmake.setVariant"
+                },
+                {
+                    "key": "t",
+                    "name": "Select build target",
+                    "type": "command",
+                    "command": "cmake.setDefaultTarget"
+                },
+                {
+                    "key": "n",
+                    "name": "Select launch target",
+                    "type": "command",
+                    "command": "cmake.selectLaunchTarget"
+                },
+                {
+                    "key": "l",
+                    "name": "clean",
+                    "type": "command",
+                    "command": "cmake.clean"
+                },
+                {
+                    "key": "s",
+                    "name": "Stop",
+                    "type": "command",
+                    "command": "cmake.stop"
+                },
+                {
+                    "key": "i",
+                    "name": "Install",
+                    "type": "command",
+                    "command": "cmake.install"
+                },
+                {
+                    "key": "p",
+                    "name": "+Preset",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "Select configure preset",
+                            "type": "command",
+                            "command": "cmake.selectConfigurePreset"
+                        },
+                        {
+                            "key": "b",
+                            "name": "Select build preset",
+                            "type": "command",
+                            "command": "cmake.selectBuildPreset"
+                        },
+                        {
+                            "key": "t",
+                            "name": "Select test preset",
+                            "type": "command",
+                            "command": "cmake.selectTestPreset"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "f",
+            "name": "+File",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "Show all files",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "B",
+                    "name": "Show all files in active group",
+                    "type": "command",
+                    "command": "workbench.action.showEditorsInActiveGroup"
+                },
+                {
+                    "key": "y",
+                    "name": "Copy path of active file",
+                    "type": "command",
+                    "command": "workbench.action.files.copyPathOfActiveFile"
+                }
+            ]
+        },
+        {
+            "key": "g",
+            "name": "+Git",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "b",
+                    "name": "Checkout",
+                    "type": "command",
+                    "command": "git.checkout"
+                },
+                {
+                    "key": "c",
+                    "name": "Changes",
+                    "type": "command",
+                    "command": "git.openChange"
+                },
+                {
+                    "key": "d",
+                    "name": "Diff With",
+                    "type": "command",
+                    "command": "gitlens.diffWithRevision"
+                },
+                {
+                    "key": "D",
+                    "name": "Diff with working tree",
+                    "type": "command",
+                    "command": "gitlens.diffWithWorking"
+                },
+                {
+                    "key": "i",
+                    "name": "Init",
+                    "type": "command",
+                    "command": "git.init"
+                },
+                {
+                    "key": "m",
+                    "name": "Merge",
+                    "type": "command",
+                    "command": "git.merge"
+                },
+                {
+                    "key": "s",
+                    "name": "Status",
+                    "type": "command",
+                    "command": "workbench.view.scm"
+                },
+                {
+                    "key": "S",
+                    "name": "Stage",
+                    "type": "command",
+                    "command": "git.stage"
+                },
+                {
+                    "key": "U",
+                    "name": "Unstage",
+                    "type": "command",
+                    "command": "git.unstage"
+                },
+                {
+                    "key": "j",
+                    "name": "Next change",
+                    "type": "command",
+                    "command": "workbench.action.editor.nextChange"
+                },
+                {
+                    "key": "k",
+                    "name": "Previous change",
+                    "type": "command",
+                    "command": "workbench.action.editor.previousChange"
+                },
+                {
+                    "key": "f",
+                    "name": "File history",
+                    "type": "command",
+                    "command": "gitlens.showQuickFileHistory"
+                },
+                {
+                    "key": "g",
+                    "name": "Open commit graph",
+                    "type": "command",
+                    "command": "gitlens.showGraphPage"
+                }
+            ]
+        },
+        {
+            "key": "l",
+            "name": "+lsp",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "Format file",
+                    "type": "command",
+                    "command": "editor.action.formatDocument"
+                }
+            ]
+        },
+        {
+            "key": "M",
+            "name": "+Manpages",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "m",
+                    "name": "Open from selection",
+                    "type": "command",
+                    "command": "manpages.openFromSelection"
+                },
+                {
+                    "key": "i",
+                    "name": "Open from input",
+                    "type": "command",
+                    "command": "manpages.openFromInput"
+                },
+                {
+                    "key": "s",
+                    "name": "Search from input",
+                    "type": "command",
+                    "command": "manpages.searchFromInput"
+                }
+            ]
+        },
+        {
+            "key": "x",
+            "name": "+Others",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "i",
+                    "name": "Organize imports",
+                    "type": "command",
+                    "command": "editor.action.organizeImports"
+                },
+                {
+                    "key": "r",
+                    "name": "Rename symbol",
+                    "type": "command",
+                    "command": "editor.action.refactor"
+                },
+                {
+                    "key": ".",
+                    "name": "Quick fix",
+                    "type": "command",
+                    "command": "editor.action.quickFix"
+                },
+                {
+                    "key": "u",
+                    "name": "To lower case",
+                    "type": "command",
+                    "command": "editor.action.transformToLowercase"
+                },
+                {
+                    "key": "U",
+                    "name": "To upper case",
+                    "type": "command",
+                    "command": "editor.action.transformToUppercase"
+                }
+            ]
+        },
+        {
+            "key": "/",
+            "name": "Search in a project",
+            "type": "command",
+            "command": "workbench.action.findInFiles"
+        },
+        {
+            "key": "*",
+            "name": "Search in a project with a selection",
+            "type": "commands",
+            "commands": [
+                "editor.action.addSelectionToNextFindMatch",
+                "workbench.action.findInFiles"
+            ]
+        }
+    ],
+    // markdown lint
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[c]": {
+        "editor.rulers": [
+            80
+        ],
+        "editor.tabSize": 8,
+        "editor.insertSpaces": false,
+        "editor.useTabStops": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
+        "editor.rulers": [
+            80
+        ],
+        "editor.tabSize": 8,
+        "editor.insertSpaces": false,
+        "editor.useTabStops": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
+}
